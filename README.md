@@ -40,22 +40,23 @@ Unlock hidden modes with these secret combinations:
 
 ## 🔧 Setup and Installation
 
-1. Clone the repository
-Open index.html in your browser
+- 1. Clone the repository
+- Open index.html in your browser
 
 ### 🎨 Customization
-Modify script.js to add more easter eggs
-Adjust CSS for personalized styling
-Customize snowfall parameters
+- Modify script.js to add more easter eggs
+- Adjust CSS for personalized styling
+- Customize snowfall parameters
 
 ### 🤝 Contributing
-Fork the repository
-Create your feature branch
-Commit your changes
-Push to the branch
-Create a Pull Request
+- Fork the repository
+- Create your feature branch
+- Commit your changes
+- Push to the branch
+- Create a Pull Request
 
-🎅 About the Creator
+### 🎅 About the Creator
+
 Crafted with ❤️ and holiday spirit by Fluffythebunny/Pugls
 
 Enjoy the countdown and may your code be as merry as Christmas! 🎄🎁

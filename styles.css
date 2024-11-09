@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap');
+
+:root {
+    --glass-background: rgba(255, 255, 255, 0.2);
+    --glass-blur: 10px;
+    --christmas-red: #D3212D;
+    --christmas-green: #3C8D0D;
+}
+
+body {
+    font-family: 'Mountains of Christmas', cursive;
+    background: linear-gradient(135deg, #2C3E50, #4CA1AF);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+    color: white;
+}
+
+#countdown {
+    display: flex;
+    gap: 20px;
+    background: var(--glass-background);
+    backdrop-filter: blur(var(--glass-blur));
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    perspective: 500px;
+}
+
+.number {
+    font-size: 4rem;
+    color: var(--christmas-red);
+    font-weight: bold;
+    transform: rotateX(-20deg);
+    transition: all 0.3s ease;
+}
+
+.label {
+    font-size: 1.2rem;
+    color: var(--christmas-green);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.countdown-item:hover .number {
+    transform: scale(1.1) rotateX(0);
+    color: #ff6b6b;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1) rotate(-5deg); }
+    50% { transform: scale(1.1) rotate(5deg); }
+    100% { transform: scale(1) rotate(-5deg); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scale(1) rotate(-5deg); }
+    50% { transform: scale(1.2) rotate(5deg); }
+}
+
+.number.pulse {
+    animation: pulse 0.5s infinite;
+}
+
+.number.bounce {
+    animation: bounce 0.5s ease;
+}
+
+.snowflake {
+    position: fixed;
+    top: -10px;
+    background: white;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: fall linear infinite;
+    z-index: 9999;
+}
+
+@keyframes fall {
+    to {
+        transform: 
+            translateY(100vh) 
+            translateX(50px)
+            rotate(360deg);
+    }
+}
+
+.animated-candycane {
+    transition: transform 0.3s ease;
+}
+
+.animated-candycane:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+.candy-cane-frame {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.candy-cane-frame svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.countdown-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 20px;
+    background: var(--glass-background);
+    backdrop-filter: blur(var(--glass-blur));
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
